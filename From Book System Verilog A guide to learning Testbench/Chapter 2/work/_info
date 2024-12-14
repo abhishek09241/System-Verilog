@@ -1,0 +1,319 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt2
+R1
+Z3 !s12c _opt1
+R1
+R3
+R1
+R0
+R1
+R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z4 d/home/abhishek
+T_opt
+!s110 1734209072
+V_D1VGOdLMJbban<dOab<c1
+04 9 4 work Question8 fast 0
+=1-000ae431a4f1-675dee30-cc1d8-6f7b
+R1
+Z5 !s12b OEM100
+Z6 !s124 OEM10U1 
+Z7 o-quiet -auto_acc_if_foreign -work work
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2023.3;77
+T_opt1
+!s110 1734199998
+VXMHSiYkM[YOmd>0M0:afG3
+04 9 4 work Question6 fast 0
+=1-000ae431a4f1-675dcabe-6e5b5-3712
+R1
+R5
+R6
+R7
+R8
+n@_opt1
+R9
+R4
+T_opt2
+!s110 1734203956
+VXY=4aHDlcV4nkHQRBzgBX2
+04 9 4 work Question7 fast 0
+=1-000ae431a4f1-675dda34-b5b6a-529f
+R1
+R5
+R6
+R7
+R8
+n@_opt2
+R9
+R4
+vQuestion2
+2Question2.sv
+Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1734154386
+!i10b 1
+!s100 jbVHo^9iYjXh5NLobhXU?3
+I_N77:JPHCT`fGcCmT[BZX2
+S1
+Z11 d/home/abhishek/System Verilog/From Book/Chapter 2
+w1734154375
+8Question2.sv
+FQuestion2.sv
+!i122 13
+L0 2 67
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1734154386.000000
+!s107 Question2.sv|
+!s90 -reportprogress|300|Question2.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+n@question2
+vQuestion3
+2Question3.sv
+R10
+!s110 1734193961
+!i10b 1
+!s100 ^[8aT8n;U`CgUBI6i_cS`0
+IUf6H23lIWi=X7WgDOIUHJ0
+S1
+R11
+w1734193940
+8Question3.sv
+FQuestion3.sv
+!i122 17
+L0 1 40
+R12
+R13
+r1
+!s85 0
+31
+!s108 1734193961.000000
+!s107 Question3.sv|
+!s90 -reportprogress|300|Question3.sv|
+!i113 0
+R14
+R8
+n@question3
+vQuestion4
+2Question4.sv
+R10
+!s110 1734197907
+!i10b 1
+!s100 5Fm4BI<PdF@BCzz4j[2=z1
+IURWToUS?QZ`WK_2k9ZC^S3
+S1
+R11
+w1734197904
+8Question4.sv
+FQuestion4.sv
+!i122 22
+L0 10 27
+R12
+R13
+r1
+!s85 0
+31
+!s108 1734197907.000000
+!s107 Question4.sv|
+!s90 -reportprogress|300|Question4.sv|
+!i113 0
+R14
+R8
+n@question4
+vQuestion5
+2Question5.sv
+R10
+!s110 1734199128
+!i10b 1
+!s100 6QoK@4_^AK^?>gbzHUUJI2
+IJjh:>hTVmWMlZIa_od72S1
+S1
+R11
+w1734199118
+8Question5.sv
+FQuestion5.sv
+!i122 24
+L0 1 27
+R12
+R13
+r1
+!s85 0
+31
+!s108 1734199128.000000
+!s107 Question5.sv|
+!s90 -reportprogress|300|Question5.sv|
+!i113 0
+R14
+R8
+n@question5
+vQuestion6
+2Question6.sv
+R10
+!s110 1734199994
+!i10b 1
+!s100 czQ_dccAiCWcnJN<>5GAm3
+Ib6eUzK3GXXZCL:D7oIJYg1
+S1
+R11
+w1734199986
+8Question6.sv
+FQuestion6.sv
+!i122 26
+L0 1 21
+R12
+R13
+r1
+!s85 0
+31
+!s108 1734199994.000000
+!s107 Question6.sv|
+!s90 -reportprogress|300|Question6.sv|
+!i113 0
+R14
+R8
+n@question6
+vQuestion7
+2Question7.sv
+R10
+!s110 1734203952
+!i10b 1
+!s100 OS4W7kn_>f4f^cAF1V=KF1
+I=]<NEoAOa8akDW>hA@4=K0
+S1
+R11
+w1734203911
+8Question7.sv
+FQuestion7.sv
+!i122 27
+L0 1 34
+R12
+R13
+r1
+!s85 0
+31
+!s108 1734203952.000000
+!s107 Question7.sv|
+!s90 -reportprogress|300|Question7.sv|
+!i113 0
+R14
+R8
+n@question7
+vQuestion8
+2Question8.sv
+R10
+!s110 1734209070
+!i10b 1
+!s100 SdMIfo^0]4>NYi<em^43I0
+I9HdDD3>a0<H]`h:?JfdmR1
+S1
+R11
+w1734209063
+8Question8.sv
+FQuestion8.sv
+!i122 47
+L0 9 123
+R12
+R13
+r1
+!s85 0
+31
+!s108 1734209070.000000
+!s107 Question8.sv|
+!s90 -reportprogress|300|Question8.sv|
+!i113 0
+R14
+R8
+n@question8
