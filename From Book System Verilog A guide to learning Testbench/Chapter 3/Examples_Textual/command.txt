@@ -1,0 +1,47 @@
+module procedural_statements ();
+
+
+	// **************** New procedural statements and operators ****************//
+	initial
+		begin : example
+			integer array[10], sum, j;
+
+
+			// Declare i in for statement
+
+			for (int i=0; i<10; i++)
+				array[i] = i;
+
+
+			sum = array[9];
+			j=8;
+			do
+				sum += array[j];
+			while (j--);
+			$display("Sum=%4d",sum);
+		end : example
+
+
+		// ************************* Using break and continue while reading a file ************************ //
+
+		initial
+			begin
+				bit [127:0] cmd;
+				int file, c;
+
+
+				file = $fopen("commands.txt","r");
+				while (!$feof(file))
+					begin
+						c = $fscanf(file, "%s", cmd);
+						case(cmd)
+
+							"": 	continue;
+							"done": break;
+							
+						endcase
+					end
+				$fclose(file);
+			end
+
+endmodule : procedural_statements
