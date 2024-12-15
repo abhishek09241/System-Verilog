@@ -11,7 +11,7 @@ R0
 R1
 R0
 R1
-R0
+Z2 !s12c _opt1
 R1
 R0
 R1
@@ -35,19 +35,21 @@ R0
 R1
 R0
 R1
-R0
-R1
-R0
-R1
-Z2 !s12c _opt2
-R1
-Z3 !s12c _opt1
+Z3 !s12c _opt2
 R1
 R3
 R1
-R0
+R3
 R1
-R0
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
 R1
 R2
 R1
@@ -57,11 +59,69 @@ R2
 R1
 R2
 R1
+R2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R3
+R1
+R2
+R1
+R2
+R1
+R0
+R1
+R0
+R1
+R3
+R1
 R3
 R1
 R3
 R1
 R3
+R1
+R2
+R1
+R2
+R1
+R2
 R1
 R0
 R1
@@ -98,22 +158,22 @@ R1
 cModel Technology
 Z4 d/home/abhishek
 T_opt
-!s110 1734209072
-V_D1VGOdLMJbban<dOab<c1
-04 9 4 work Question8 fast 0
-=1-000ae431a4f1-675dee30-cc1d8-6f7b
+!s110 1734253728
+V2Dd=N1hY8U[1WNeb0=5]82
+04 10 4 work Question11 fast 0
+=1-000ae431a4f1-675e9ca0-b9311-423b
 R1
 Z5 !s12b OEM100
-Z6 !s124 OEM10U1 
+Z6 !s124 OEM10U2 
 Z7 o-quiet -auto_acc_if_foreign -work work
 Z8 tCvgOpt 0
 n@_opt
 Z9 OL;O;2023.3;77
 T_opt1
-!s110 1734199998
-VXMHSiYkM[YOmd>0M0:afG3
-04 9 4 work Question6 fast 0
-=1-000ae431a4f1-675dcabe-6e5b5-3712
+!s110 1734252818
+VzS7<]RPcHnDhSh2V`dCUP3
+04 6 4 work ALU_tb fast 0
+=1-000ae431a4f1-675e9912-77519-3db5
 R1
 R5
 R6
@@ -123,34 +183,164 @@ n@_opt1
 R9
 R4
 T_opt2
-!s110 1734203956
-VXY=4aHDlcV4nkHQRBzgBX2
-04 9 4 work Question7 fast 0
-=1-000ae431a4f1-675dda34-b5b6a-529f
+!s110 1734247222
+VNd@BCkb=K4DPKQ<R7NADC2
+04 10 4 work Question10 fast 0
+=1-000ae431a4f1-675e8336-880fc-249b
 R1
 R5
-R6
+!s124 OEM10U1 
 R7
 R8
 n@_opt2
 R9
 R4
+vALU
+Z10 2Question11_design.sv
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1734252802
+!i10b 1
+!s100 XB5:NZb2UO63aLb9f8>Z^2
+IekZQ]HXfNVj?P1UYIOSX]2
+S1
+Z12 d/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 2
+w1734252673
+Z13 8Question11_design.sv
+Z14 FQuestion11_design.sv
+!i122 85
+Z15 L0 1 24
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+Z17 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1734252802.000000
+Z18 !s107 Question11_design.sv|
+Z19 !s90 -reportprogress|300|Question11_design.sv|
+!i113 0
+Z20 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+n@a@l@u
+vALU_tb
+Z21 2Question11.sv
+R11
+!s110 1734252811
+!i10b 1
+!s100 ?OR9SR=]k98711hGaPl<Z0
+IG3F;Jl^i[P[JNSNg7`=QR0
+S1
+R12
+w1734252686
+Z22 8Question11.sv
+Z23 FQuestion11.sv
+!i122 86
+L0 1 50
+R16
+R17
+r1
+!s85 0
+31
+!s108 1734252811.000000
+Z24 !s107 Question11.sv|
+Z25 !s90 -reportprogress|300|Question11.sv|
+!i113 0
+R20
+R8
+n@a@l@u_tb
+vQuestion10
+2Question10.sv
+R11
+!s110 1734247220
+!i10b 1
+!s100 Q`jLaHZ@[DfoJd@94W[bJ2
+IYAbV>`=AhY^b0o7_2TZ7L2
+S1
+R12
+w1734247210
+8Question10.sv
+FQuestion10.sv
+!i122 61
+L0 12 51
+R16
+R17
+r1
+!s85 0
+31
+!s108 1734247220.000000
+!s107 Question10.sv|
+!s90 -reportprogress|300|Question10.sv|
+!i113 0
+R20
+R8
+n@question10
+vQuestion11
+R21
+R11
+!s110 1734253724
+!i10b 1
+!s100 ;R<6Hb6b]eZ>USH_UBOnB0
+IOh5_WeM`EF=2J1=BM?BHG2
+S1
+R12
+w1734253713
+R22
+R23
+!i122 95
+L0 1 55
+R16
+R17
+r1
+!s85 0
+31
+!s108 1734253724.000000
+R24
+R25
+!i113 0
+R20
+R8
+n@question11
+vQuestion11_design
+R10
+R11
+!s110 1734253632
+!i10b 1
+!s100 fIG?77;dQm^3:ZFH1;Az>0
+IXWj16TE7TgQZ1a73XEfIV1
+S1
+R12
+w1734253586
+R13
+R14
+!i122 92
+R15
+R16
+R17
+r1
+!s85 0
+31
+!s108 1734253631.000000
+R18
+R19
+!i113 0
+R20
+R8
+n@question11_design
 vQuestion2
 2Question2.sv
-Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R11
 !s110 1734154386
 !i10b 1
 !s100 jbVHo^9iYjXh5NLobhXU?3
 I_N77:JPHCT`fGcCmT[BZX2
 S1
-Z11 d/home/abhishek/System Verilog/From Book/Chapter 2
+Z26 d/home/abhishek/System Verilog/From Book/Chapter 2
 w1734154375
 8Question2.sv
 FQuestion2.sv
 !i122 13
 L0 2 67
-Z12 VDg1SIo80bB@j0V0VzS_@n1
-Z13 OL;L;2023.3;77
+R16
+R17
 r1
 !s85 0
 31
@@ -158,25 +348,25 @@ r1
 !s107 Question2.sv|
 !s90 -reportprogress|300|Question2.sv|
 !i113 0
-Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R20
 R8
 n@question2
 vQuestion3
 2Question3.sv
-R10
+R11
 !s110 1734193961
 !i10b 1
 !s100 ^[8aT8n;U`CgUBI6i_cS`0
 IUf6H23lIWi=X7WgDOIUHJ0
 S1
-R11
+R26
 w1734193940
 8Question3.sv
 FQuestion3.sv
 !i122 17
 L0 1 40
-R12
-R13
+R16
+R17
 r1
 !s85 0
 31
@@ -184,25 +374,25 @@ r1
 !s107 Question3.sv|
 !s90 -reportprogress|300|Question3.sv|
 !i113 0
-R14
+R20
 R8
 n@question3
 vQuestion4
 2Question4.sv
-R10
+R11
 !s110 1734197907
 !i10b 1
 !s100 5Fm4BI<PdF@BCzz4j[2=z1
 IURWToUS?QZ`WK_2k9ZC^S3
 S1
-R11
+R26
 w1734197904
 8Question4.sv
 FQuestion4.sv
 !i122 22
 L0 10 27
-R12
-R13
+R16
+R17
 r1
 !s85 0
 31
@@ -210,25 +400,25 @@ r1
 !s107 Question4.sv|
 !s90 -reportprogress|300|Question4.sv|
 !i113 0
-R14
+R20
 R8
 n@question4
 vQuestion5
 2Question5.sv
-R10
+R11
 !s110 1734199128
 !i10b 1
 !s100 6QoK@4_^AK^?>gbzHUUJI2
 IJjh:>hTVmWMlZIa_od72S1
 S1
-R11
+R26
 w1734199118
 8Question5.sv
 FQuestion5.sv
 !i122 24
 L0 1 27
-R12
-R13
+R16
+R17
 r1
 !s85 0
 31
@@ -236,25 +426,25 @@ r1
 !s107 Question5.sv|
 !s90 -reportprogress|300|Question5.sv|
 !i113 0
-R14
+R20
 R8
 n@question5
 vQuestion6
 2Question6.sv
-R10
+R11
 !s110 1734199994
 !i10b 1
 !s100 czQ_dccAiCWcnJN<>5GAm3
 Ib6eUzK3GXXZCL:D7oIJYg1
 S1
-R11
+R26
 w1734199986
 8Question6.sv
 FQuestion6.sv
 !i122 26
 L0 1 21
-R12
-R13
+R16
+R17
 r1
 !s85 0
 31
@@ -262,25 +452,25 @@ r1
 !s107 Question6.sv|
 !s90 -reportprogress|300|Question6.sv|
 !i113 0
-R14
+R20
 R8
 n@question6
 vQuestion7
 2Question7.sv
-R10
+R11
 !s110 1734203952
 !i10b 1
 !s100 OS4W7kn_>f4f^cAF1V=KF1
 I=]<NEoAOa8akDW>hA@4=K0
 S1
-R11
+R26
 w1734203911
 8Question7.sv
 FQuestion7.sv
 !i122 27
 L0 1 34
-R12
-R13
+R16
+R17
 r1
 !s85 0
 31
@@ -288,25 +478,25 @@ r1
 !s107 Question7.sv|
 !s90 -reportprogress|300|Question7.sv|
 !i113 0
-R14
+R20
 R8
 n@question7
 vQuestion8
 2Question8.sv
-R10
+R11
 !s110 1734209070
 !i10b 1
 !s100 SdMIfo^0]4>NYi<em^43I0
 I9HdDD3>a0<H]`h:?JfdmR1
 S1
-R11
+R26
 w1734209063
 8Question8.sv
 FQuestion8.sv
 !i122 47
 L0 9 123
-R12
-R13
+R16
+R17
 r1
 !s85 0
 31
@@ -314,6 +504,32 @@ r1
 !s107 Question8.sv|
 !s90 -reportprogress|300|Question8.sv|
 !i113 0
-R14
+R20
 R8
 n@question8
+vQuestion9
+2Question9.sv
+R11
+!s110 1734243794
+!i10b 1
+!s100 VSY2c?z^:b]JkD3gY3:O?1
+I?;>RWnOj4^]lg8jAehB>i0
+S1
+R12
+w1734243779
+8Question9.sv
+FQuestion9.sv
+!i122 53
+L0 6 22
+R16
+R17
+r1
+!s85 0
+31
+!s108 1734243794.000000
+!s107 Question9.sv|
+!s90 -reportprogress|300|Question9.sv|
+!i113 0
+R20
+R8
+n@question9

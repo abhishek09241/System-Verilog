@@ -9,7 +9,7 @@ g. Reverse sort all values in the queue and print out the resulting queue*/
 module Question8 ();
 	
 		byte queue [3]={8'd2, -1, 8'd127};
-		byte tqueue[$];
+		byte tqueue[$];						// Temporary queue
 		int sum;
 		byte min_values;
 		byte max_values;
