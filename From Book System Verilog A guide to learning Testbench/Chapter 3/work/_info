@@ -1,13 +1,21 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt2
 Z1 !s99 nomlopt
 R0
 R1
-Z2 !s12c _opt
+R0
+R1
+R0
+R1
+Z2 !s12c _opt1
 R1
 R2
+R1
+Z3 !s12c _opt
+R1
+R3
 R1
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
@@ -16,48 +24,61 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z3 d/home/abhishek
+Z4 d/home/abhishek
 T_opt
 !s110 1734291113
 VaXl[ko=z_;04[JjUXMN[h2
 04 9 4 work Question1 fast 0
 =1-000ae431a4f1-675f2ea9-d3fd1-2055
 R1
-Z4 !s12b OEM100
-Z5 !s124 OEM10U1 
-Z6 o-quiet -auto_acc_if_foreign -work work
-Z7 tCvgOpt 0
+Z5 !s12b OEM100
+Z6 !s124 OEM10U1 
+Z7 o-quiet -auto_acc_if_foreign -work work
+Z8 tCvgOpt 0
 n@_opt
-Z8 OL;O;2023.3;77
-R3
+Z9 OL;O;2023.3;77
+R4
 T_opt1
 !s110 1734292372
 V9PSWE=9G33K2e=<O_Yz0X1
 04 9 4 work Question2 fast 0
 =1-000ae431a4f1-675f3394-66db7-2303
 R1
-R4
 R5
 R6
 R7
-n@_opt1
 R8
+n@_opt1
+R9
+R4
+T_opt2
+!s110 1734349624
+VR7?I0n@;h5YRNfSn8mHH]3
+04 9 4 work Question4 fast 0
+=1-000ae431a4f1-67601338-13cf8-194c
+R1
+R5
+R6
+R7
+R8
+n@_opt2
+R9
 vQuestion1
 2Question1.sv
-Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 !s110 1734291110
 !i10b 1
 !s100 F7bjVR1UAnC:=HoQEoP=o2
 Ij^4@KaeoFD]6EF;cKz=V<1
 S1
-Z10 d/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 3
+Z11 d/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 3
 w1734291099
 8Question1.sv
 FQuestion1.sv
 !i122 1
 L0 14 31
-Z11 VDg1SIo80bB@j0V0VzS_@n1
-Z12 OL;L;2023.3;77
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2023.3;77
 r1
 !s85 0
 31
@@ -65,25 +86,25 @@ r1
 !s107 Question1.sv|
 !s90 -reportprogress|300|Question1.sv|
 !i113 0
-Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R7
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
 n@question1
 vQuestion2
 2Question2.sv
-R9
+R10
 !s110 1734292370
 !i10b 1
 !s100 CR@I^PKBlzZVJk7iWUbAo3
 IQLV^a2OBNm]eFfcAO?;5L3
 S1
-R10
+R11
 w1734292290
 8Question2.sv
 FQuestion2.sv
 !i122 3
 L0 4 24
-R11
 R12
+R13
 r1
 !s85 0
 31
@@ -91,6 +112,32 @@ r1
 !s107 Question2.sv|
 !s90 -reportprogress|300|Question2.sv|
 !i113 0
-R13
-R7
+R14
+R8
 n@question2
+vQuestion4
+2Question4.sv
+R10
+!s110 1734349619
+!i10b 1
+!s100 Kz1cN[LfG]@?a=a<j^aZS0
+IEFghegU:?zZYmzzN?2cCU0
+S1
+R11
+w1734349608
+8Question4.sv
+FQuestion4.sv
+!i122 7
+L0 6 35
+R12
+R13
+r1
+!s85 0
+31
+!s108 1734349619.000000
+!s107 Question4.sv|
+!s90 -reportprogress|300|Question4.sv|
+!i113 0
+R14
+R8
+n@question4
