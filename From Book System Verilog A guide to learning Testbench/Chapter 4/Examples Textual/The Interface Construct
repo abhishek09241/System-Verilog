@@ -1,0 +1,249 @@
+The Interface Construct
+Designs have become so complex that even the communication between blocks may
+need to be separated out into separate entities. To model this, SystemVerilog uses
+the interface construct that you can think of as an intelligent bundle of wires. It contains the connectivity, synchronization, and optionally, the functionality of the com-
+munication between two or more blocks and, optionally, error checking. They
+connect design blocks and/or testbenches.
+The first improvement to the arbiter example is to bundle the wires together into an
+interface. Figure 4.3 shows the testbench and arbiter, communicating using an inter-
+face. Note how the interface extends into the two blocks, representing the drivers
+and receivers that are functionally part of both the test and the DUT. The clock can
+be part of the interface or a separate port.
+The simplest interface is just a bundle of bidirectional signals as shown in Sample 4.4.
+Use the logic data type so you can drive the signals from procedural statements.
+
+// Sample 4.4 Simple interface for arbiter
+
+interface arbiter_interface (input bit clk);
+		logic [1:0] grant, request;
+		bit rst;
+endinterface : arbiter_interface
+
+
+Sample 4.5 is the device under test, the arbiter, that uses an interface instead of
+ports
+
+//Sample 4.5 Arbiter using a simple interface
+
+module arbiter_with_interface (arbiter_interface  arb_intf);
+			always @(posedge arb_intf.clk or posedge arb_intf.rst)
+				begin
+					if(arb_intf.rst)
+						arb_intf.grant <= 2'b00;
+					else if (arb_intf.request[0])
+						arb_intf.grant <= 2'b01;
+					else if (arb_intf.request[1])
+						arb_intf.grant <= 2'b10;
+					else
+						arb_intf.grant <= 2'b00;
+				end
+
+endmodule : arbiter_with_interface
+
+Sample 4.6 shows the testbench. You refer to a signal in an interface by making
+a hierarchical reference using the instance name: arbif.request. Interface sig-
+nals should always be driven using nonblocking assignments. This is explained in
+more detail in Section 4.4.3 and 4.4.4.
+
+// Sample 4.6 Testbench using a simple arbiter interface
+
+module arbiter_test_with_interface (arbiter_interface  arb_intf);
+
+		initial
+			begin
+				@(posedge  arb_intf.clk);
+				arb_intf.request <= 2'b01;
+				$display("@%0t: Drove req=01", $time);
+
+				repeat (2) @(posedge arb_intf.clk);
+				if (arbiter_interface.grant != 2'b01) 
+					begin
+					 	$display("@%0t: Error: grant != 2'b01", $time);
+
+					 $finish;		
+					end 
+			end
+
+endmodule : arbiter_test_with_interface
+
+All these blocks are instantiated and connected in the top module as shown in
+Sample 4.7.
+
+// Sample 4.7 Top module with a simple arbiter interface
+
+module arbiter_tb_top;
+	bit clk;
+	always #50 clk = ~clk;
+
+	arbiter_interface     arb_intf(clk);
+	arbiter_with_interface a1(arb_intf);
+	arbiter_test_with_interface t1(arb_intf);
+
+endmodule : arbiter_tb_top
+
+You can see an immediate benefit, even on this small device: the connections
+become cleaner and less prone to mistakes. If you wanted to put a new signal in an
+interface, you would just have to add it to the interface definition and the modules
+that actually used it. You would not have to change any module such as top that just
+passes the interface through. This language feature greatly reduces the chance for
+wiring errors.     
+
+This book only shows interfaces with a single clock that is connected to a genera-
+tor at the top level. If your interface requires multiple clocks, treat them like the
+other signals inside the interface, and connect the interface to a clock generator. You
+are more productive if you work at a high level and treat the interface as a cycle
+based construct. The next level up is transaction-based, which is beyond typical
+RTL code.
+
+Make sure you declare your interfaces outside of modules and
+program blocks. If you forget, expect all sorts of trouble. Some
+compilers may not support defining an interface inside a mod-
+ule. If allowed, the interface would be local to the module and
+thus not visible to the rest of the design. Sample 4.8 shows the common mistake of
+including the interface definition right after other include statements
+Sample 4.8 Bad test module includes interface
+
+module bad_test (arb_if arbif);
+`include "Mytest.sv" // Legal include
+`include "arb_if.sv" //Bad :Interface hiddden in module
+
+Grouping Signals in an Interface Using Modports
+Sample 4.5 uses a point-to-point connection scheme with no signal directions in the
+interface. The original modules using ports had this information that the compiler
+uses to check for wiring mistakes. The modport construct in an interface lets you
+group signals and specify directions. The MONITOR modport in Sample 4.10 allows
+you to connect a monitor module to the interface.
+
+// Sample 4.10 Interface with modports
+
+
+interface arbiter_interface (input bit clk);
+		logic [1:0] grant, request;
+		bit rst;
+
+		modport TEST (output request, rst,
+					  input  grant, clk);
+
+
+		modport DUT (input request, rst, clk
+					 output grant);
+
+		modport MONITOR (input  request, grant, rst.clk);
+endinterface : arbiter_interface
+
+
+
+Sample 4.11 shows the arbiter model and testbench, with the modport in their
+port connection list. Note that you put the modport name, DUT or TEST, after the
+interface name, arb_if. Other than the modport name, these are identical to the
+previous examples.
+
+// Sample 4.11 Arbiter model with interface using modports
+
+module arbiter_with_modport (arbiter_interface.DUT  arb_intf);
+			always @(posedge arb_intf.clk or posedge arb_intf.rst)
+				begin
+					if(arb_intf.rst)
+						arb_intf.grant <= 2'b00;
+					else if (arb_intf.request[0])
+						arb_intf.grant <= 2'b01;
+					else if (arb_intf.request[1])
+						arb_intf.grant <= 2'b10;
+					else
+						arb_intf.grant <= 2'b00;
+				end
+
+endmodule : arbiter_with_modport
+
+
+
+//Sample 4.12 Testbench with interface using modports
+module arbiter_test_with_modport (arbiter_interface.TEST  arb_intf);
+
+		initial
+			begin
+				@(posedge  arb_intf.clk);
+				arb_intf.request <= 2'b01;
+				$display("@%0t: Drove req=01", $time);
+
+				repeat (2) @(posedge arb_intf.clk);
+				if (arbiter_interface.grant != 2'b01) 
+					begin
+					 	$display("@%0t: Error: grant != 2'b01", $time);
+
+					 $finish;		
+					end 
+			end
+
+endmodule : arbiter_test_with_modport
+
+Even though the code didn’t change much (except that the interface grew larger),
+this interface more accurately represents the real design, especially the signal
+direction.
+There are two ways to use these modport names in your design. You can specify
+them in the modules that connect to the interface signals. In this case, the top
+model does not change from Sample 4.7, except for the module names. This bookrecommends this style, as the modport is an implementation detail that should not
+clutter the top level module.
+The alternative is to specify the modport when you instantiate the module as
+shown in Sample 4.13.
+
+// Sample 4.13 Top level module with modports
+
+module arbiter_tb_top_modport ;
+	logic [1:0] grant, request;
+	bit clk;
+	always #50 clk = ~clk;
+
+	arbiter_interface     arb_intf(clk);
+	arbiter_with_interface a1(arb_intf.DUT);
+	arbiter_test_with_interface t1(arb_intf.TEST);
+
+endmodule : arbiter_tb_top_modport
+
+With this style, you have the flexibility to instantiate a module more than once,
+with each instance connected to a different modport, that is, a different subset of
+interface signals. For example, a byte-wide RAM model could connect to one of
+four slots on a 32-bit bus. In this case, you would need to specify the modport when
+you instantiate the module, not in the module itself.
+Note that modports are defined in the interface, and specified in the module port
+list, but never in the signal name. The name arb_if.TEST.grant is illegal!
+
+Using Modports with a Bus Design
+Not every signal needs to go in every modport. Consider a CPU – memory bus mod-
+eled with an interface. The CPU is the bus master and drives a subset of the signals,
+such as request, command, and address. The memory is a slave and receives
+those signals and drives ready. Both master and slave drive data. The bus arbiter
+only looks at request and grant, and ignores all other signals. So your interface
+would have three modports for master, slave, and arbiter, plus an optional monitor
+modport
+
+
+Creating an Interface Monitor
+You can create a bus monitor using the MONITOR modport. Sample 4.14 shows a
+trivial monitor for the arbiter. For a real bus, you could decode the commands and
+print the status: completed, failed, etc.
+
+// Arbiter monitor with interface using modports
+
+module arbiter_monitor (arbiter_interface.MONITOR arb_intf);
+
+		always @(posedge arb_intf.request[0])
+			begin
+				$display("@%0t: request[0] asserted", $time);
+				@(posedge arb_intf.grant[0]);
+				$display("@%0t: grant[0] asserted", $time);
+			end
+
+		
+		always @(posedge arb_intf.request[1])
+			begin
+				$display("@%0t: request[1] asserted", $time);
+				@(posedge arb_intf.grant[1]);
+				$display("@%0t: grant[1] asserted", $time);
+			end	
+
+
+endmodule : arbiter_monitor
+
+
+
