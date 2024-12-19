@@ -1,3 +1,10 @@
+/*2. For the following interface, add the following code.
+a. A clocking block that is sensitive to the negative edge of the clock, and all I/O
+that are synchronous to the clock.
+b. A modport for the testbench called master, and a modport for the DUT called
+slave
+c. Use the clocking block in the I/O list for the master modport.*/
+
 interface my_if (input bit clk);
 
 
