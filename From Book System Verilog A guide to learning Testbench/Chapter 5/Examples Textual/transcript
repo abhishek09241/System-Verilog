@@ -1,0 +1,36 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project transaction
+vlog sample_5.1.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:01:14 on Dec 20,2024
+# vlog -reportprogress 300 sample_5.1.sv 
+# End time: 16:01:14 on Dec 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.transaction
+# vsim work.transaction 
+# Start time: 16:01:29 on Dec 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-13130) Failed to find design unit 'transaction'.
+#         Searched libraries:
+#             work
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 16:01:29 on Dec 20,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 4
+run -all
+# No Design Loaded!
+# Compile of sample_5.1.sv was successful.
