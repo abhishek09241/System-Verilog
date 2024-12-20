@@ -6,7 +6,7 @@ package Better;
 
 		// ** Will not compile because of undeclared i
 		function void display();
-			for (int i = 0; i < data.size(); i++) 
+			for ( i = 0; i < data.size(); i++) 
 				begin
 					$display("data[%0d]=%x",i,data[i]);
 				end

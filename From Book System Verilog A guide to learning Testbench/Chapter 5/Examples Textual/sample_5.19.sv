@@ -12,7 +12,7 @@ program automatic test;
 
 		function void display();
 			// Forgot to declare i in next statement
-			for (int i = 0; i < data.size(); i++) 
+			for ( i = 0; i < data.size(); i++) 
 				begin
 					$display("data[%0d]=%x",i,data[i]);
 				end	
