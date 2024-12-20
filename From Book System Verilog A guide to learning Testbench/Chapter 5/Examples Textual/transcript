@@ -12,25 +12,91 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+project open {/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 5/Examples Textual/transaction}
 # Loading project transaction
-vlog sample_5.1.sv
+vlog sample_5.14.sv
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:01:14 on Dec 20,2024
-# vlog -reportprogress 300 sample_5.1.sv 
-# End time: 16:01:14 on Dec 20,2024, Elapsed time: 0:00:00
+# Start time: 21:20:58 on Dec 20,2024
+# vlog -reportprogress 300 sample_5.14.sv 
+# ** Error: (vlog-13069) sample_5.14.sv(13): near ".": syntax error, unexpected '.'.
+# End time: 21:20:58 on Dec 20,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/abhishek/intelFPGA_lite/23.1std/questa_fse/linux_x86_64/vlog failed.
+vlog sample_5.14.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 21:21:29 on Dec 20,2024
+# vlog -reportprogress 300 sample_5.14.sv 
+# ** Error: sample_5.14.sv(16): (vlog-2730) Undefined variable: 't1'.
+# ** Error: sample_5.14.sv(18): (vlog-2730) Undefined variable: 't2'.
+# End time: 21:21:29 on Dec 20,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /home/abhishek/intelFPGA_lite/23.1std/questa_fse/linux_x86_64/vlog failed.
+vlog sample_5.14.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 21:21:52 on Dec 20,2024
+# vlog -reportprogress 300 sample_5.14.sv 
+# -- Compiling package sample_5_14_sv_unit
+# -- Compiling module sample_5_14
+# 
+# Top level modules:
+# 	sample_5_14
+# End time: 21:21:52 on Dec 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.transaction
-# vsim work.transaction 
-# Start time: 16:01:29 on Dec 20,2024
+vsim work.sample_5_14
+# vsim work.sample_5_14 
+# Start time: 21:22:11 on Dec 20,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-13130) Failed to find design unit 'transaction'.
-#         Searched libraries:
-#             work
+# ** Error (suppressible): sample_5.14.sv(19): (vopt-2122) Invalid format specification '%='.
+# ** Error (suppressible): sample_5.14.sv(21): (vopt-2122) Invalid format specification '%='.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=3, Warnings=0.
+# Error loading design
+# End time: 21:22:12 on Dec 20,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 2
+vlog sample_5.14.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 21:22:44 on Dec 20,2024
+# vlog -reportprogress 300 sample_5.14.sv 
+# -- Compiling package sample_5_14_sv_unit
+# -- Compiling module sample_5_14
+# 
+# Top level modules:
+# 	sample_5_14
+# End time: 21:22:44 on Dec 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.sample_5_14
+# vsim work.sample_5_14 
+# Start time: 21:22:45 on Dec 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.sample_5_14_sv_unit(fast)
+# Loading work.sample_5_14(fast)
+run -all
+# First id=0, count=1
+# Second id=1, count=2
+quit -sim
+# End time: 21:27:31 on Dec 20,2024, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 1
+vlog sample_5.15.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 21:27:40 on Dec 20,2024
+# vlog -reportprogress 300 sample_5.15.sv 
+# -- Compiling package sample_5_15_sv_unit
+# -- Compiling module sample_5_15
+# 
+# Top level modules:
+# 	sample_5_15
+# End time: 21:27:40 on Dec 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.sample_5_15
+# vsim work.sample_5_15 
+# Start time: 21:27:53 on Dec 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): sample_5.15.sv(11): (vopt-7063) Failed to find 'run_test' in hierarchical name 'run_test'.
+#         Region: sample_5_15
 # Optimization failed
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
 # Error loading design
-# End time: 16:01:29 on Dec 20,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 4
-run -all
-# No Design Loaded!
-# Compile of sample_5.1.sv was successful.
+# End time: 21:27:53 on Dec 20,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
