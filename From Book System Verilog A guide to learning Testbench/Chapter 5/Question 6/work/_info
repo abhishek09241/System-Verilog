@@ -1,0 +1,80 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 5/Question 6
+T_opt
+!s110 1735064453
+VUE?eQ@IVH<e^DkiQG^MBb1
+04 9 4 work question6 fast 0
+=1-000ae431a4f1-676afb85-ba8df-30bb
+R1
+!s12b OEM100
+!s124 OEM10U1 
+o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vquestion6
+Z4 2question6.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+DXx4 work 17 question6_sv_unit 0 22 nTlVC:C]CoMYCiDDg2OGH3
+Z6 !s110 1735064450
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 fgY2RU1DFECCzd0?@Hjeb2
+I@FZo>[NK3o4Q3fI4a>jLE1
+!s105 question6_sv_unit
+S1
+R2
+Z7 w1735064443
+Z8 8question6.sv
+Z9 Fquestion6.sv
+!i122 1
+L0 27 14
+Z10 OL;L;2023.3;77
+31
+Z11 !s108 1735064450.000000
+Z12 !s107 question6.sv|
+Z13 !s90 -reportprogress|300|question6.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+Xquestion6_sv_unit
+R4
+R5
+R6
+VnTlVC:C]CoMYCiDDg2OGH3
+r1
+!s85 0
+!i10b 1
+!s100 hz_RZCNC^UJ=o]0BojW`:1
+InTlVC:C]CoMYCiDDg2OGH3
+!i103 1
+S1
+R2
+R7
+R8
+R9
+!i122 1
+L0 6 0
+R10
+31
+R11
+R12
+R13
+!i113 0
+R14
+R3
