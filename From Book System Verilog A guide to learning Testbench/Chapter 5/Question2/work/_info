@@ -1,0 +1,105 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 5/Question2
+T_opt
+!s110 1735059410
+Vb6?ID^DS4H6@Oia=^oYWi3
+04 9 4 work question2 fast 0
+=1-000ae431a4f1-676ae7d2-b2317-2335
+R0
+!s12b OEM100
+!s124 OEM10U1 
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vquestion1
+Z3 2question2.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 DXx4 work 17 question2_sv_unit 0 22 GPT>8ah]MJWF;6dUA[WL^1
+!s110 1735059259
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 J^jf==44gk@Io2>A3jzR:0
+Im??FKQ=CGUaQ7:Kn`Roj=0
+Z7 !s105 question2_sv_unit
+S1
+R1
+w1735059255
+Z8 8question2.sv
+Z9 Fquestion2.sv
+!i122 1
+Z10 L0 20 10
+Z11 OL;L;2023.3;77
+31
+!s108 1735059258.000000
+Z12 !s107 question2.sv|
+Z13 !s90 -reportprogress|300|question2.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vquestion2
+R3
+R4
+R5
+Z15 !s110 1735059406
+R6
+r1
+!s85 0
+!i10b 1
+!s100 FPEL2RiQBaeD?NJF<EfL33
+Izcl@_FzEbKZYo;;`S7Pz43
+R7
+S1
+R1
+Z16 w1735059297
+R8
+R9
+!i122 3
+R10
+R11
+31
+Z17 !s108 1735059406.000000
+R12
+R13
+!i113 0
+R14
+R2
+Xquestion2_sv_unit
+R3
+R4
+R15
+VGPT>8ah]MJWF;6dUA[WL^1
+r1
+!s85 0
+!i10b 1
+!s100 GZGc[]K7DTT]Q0D46Sf4d3
+IGPT>8ah]MJWF;6dUA[WL^1
+!i103 1
+S1
+R1
+R16
+R8
+R9
+!i122 3
+L0 4 0
+R11
+31
+R17
+R12
+R13
+!i113 0
+R14
+R2
