@@ -17,7 +17,7 @@ class MemTrans;
     endfunction : print
 endclass : MemTrans
 
-module question1;
+module question2;
 
     initial begin
         MemTrans Mymemtrans;
@@ -25,4 +25,4 @@ module question1;
         Mymemtrans.print(); // Prints initialized values
     end
 
-endmodule : question1
+endmodule : question2
