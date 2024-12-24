@@ -1,16 +1,19 @@
-/*4. Modify the solution from Exercise 3 to perform the following tasks.
-a. After construction, set the address of the first object to 4’hF.
-b. Use the print function to print out the values of data_in and address for
-   the two objects.
-c. Explicitly deallocate the 2nd object.*/
+/*5. Using the solution from Exercise 4, create a static variable last_address that
+holds the initial value of the address variable from the most recently created
+object, as set in the constructor. After allocating objects of class MemTrans (done
+in Exercise 4) print out the current value of last_address.*/
 
-// Define a class called MemTrans
+/// Define a class called MemTrans
 class MemTrans;
     // Declare an 8-bit logic variable for data_in
     logic [7:0] data_in;
 
     // Declare a 4-bit logic variable for address
     logic [3:0] address;
+
+    // Declare a 4-bit logic static variable for last_address
+    // This will store the address of the most recently created object
+    static logic [3:0] last_address;
 
     // Define a function to print the values of data_in and address
     function void print();
@@ -24,11 +27,14 @@ class MemTrans;
         // Initialize data_in and address with the passed values or defaults
         data_in = data_init;
         address = address_init;
+
+        // Update the static variable last_address with the current object's address
+        MemTrans::last_address = address;
     endfunction : new
 endclass : MemTrans
 
 // Define a module to test the MemTrans class
-module question4;
+module question5;
 
     // Use an initial block for simulation
     initial
@@ -40,6 +46,7 @@ module question4;
             Mytrans1 = new(.address_init(2));
 
             // Modify the address of the first object to 4'hF after construction
+            // Note: This does not affect last_address since it was set during construction
             Mytrans1.address = 4'hf;
 
             // Instantiate the second object, initializing data_in to 3 and address to 4 using named arguments
@@ -53,6 +60,10 @@ module question4;
 
             // Explicitly deallocate the second object by setting it to null
             Mytrans2 = null;
+
+            // Display the value of the static variable last_address
+            // This shows the address of the most recently created object (Mytrans2)
+            $display("last_address = %h", MemTrans::last_address);
         end
 
-endmodule : question4
+endmodule : question5
