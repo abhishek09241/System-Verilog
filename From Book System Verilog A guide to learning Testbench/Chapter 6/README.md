@@ -1,5 +1,30 @@
 # Constrained-Random Tests (CRT) in SystemVerilog
 
+## Table of Contents
+1. [Constrained-Random Tests (CRT)](#61-constrained-random-tests-crt)
+   - [Challenges](#challenges)
+   - [Limitations of Directed Tests](#limitations-of-directed-tests)
+   - [CRT Solution](#crt-solution)
+   - [Advantages](#advantages)
+2. [CRT Environment Setup](#61.1-crt-environment-setup)
+   - [Effort Comparison](#effort-comparison)
+   - [CRT Requirements](#crt-requirements)
+   - [Advantages of CRT](#advantages-of-crt)
+3. [Components of CRT](#61.2-components-of-crt)
+4. [What to Randomize in CRT](#62-what-to-randomize-in-crt)
+   - [Focus of Randomization](#focus-of-randomization)
+   - [Key Areas to Randomize](#key-areas-to-randomize)
+   - [Goal of Randomization](#goal-of-randomization)
+5. [Device Configuration in CRT](#62.1-device-configuration-in-crt)
+6. [Environment Configuration in CRT](#62.2-environment-configuration-in-crt)
+7. [Primary Input Data in CRT](#62.3-primary-input-data-in-crt)
+8. [Encapsulated Input Data in CRT](#62.4-encapsulated-input-data-in-crt)
+9. [Protocol Exceptions, Errors, and Violations in CRT](#62.5-protocol-exceptions-errors-and-violations-in-crt)
+10. [Delays in CRT](#62.6-delays-in-crt)
+11. [Randomization in SystemVerilog](#63-randomization-in-systemverilog)
+
+---
+
 ## 6.1 Constrained-Random Tests (CRT)
 
 ### Challenges
@@ -20,6 +45,8 @@
 - Finds unanticipated bugs.
 - Reduces manual effort, increasing efficiency.
 
+---
+
 ## 6.1.1 CRT Environment Setup
 
 ### Effort Comparison
@@ -34,11 +61,15 @@
 - Once set up, hundreds of tests can run automatically without manual result-checking.
 - Improves productivity by trading test-authoring time (manual effort) for CPU time (automated processing).
 
+---
+
 ## 6.1.2 Components of CRT
 
 ### Parts of CRT:
 - **Test Code**: Generates random input values for the DUT.
 - **Seed**: A starting value for the pseudo-random number generator (PRNG) that ensures the same sequence of random values can be reproduced for debugging or rerunning tests.
+
+---
 
 ## 6.2 What to Randomize in CRT
 
@@ -59,6 +90,8 @@
 ### Goal of Randomization:
 Increase path coverage: By randomizing decision points (where control paths diverge), you ensure that the DUT explores a wide variety of execution paths, increasing the chances of finding hidden bugs.
 
+---
+
 ## 6.2.1 Device Configuration in CRT
 
 ### Common Issue in RTL Testing:
@@ -74,6 +107,8 @@ A multiplexor switch with 600 input channels and 12 output channels was tested w
 ### CRT Approach:
 - By randomizing the configuration of each channel and using a loop to configure the entire device, a broader range of configurations was tested. This approach ensured that previously missed bugs were uncovered by simulating more realistic, varied configurations.
 
+---
+
 ## 6.2.2 Environment Configuration in CRT
 
 ### Randomizing the Environment:
@@ -85,6 +120,8 @@ A multiplexor switch with 600 input channels and 12 output channels was tested w
 
 ### Goal:
 Randomizing the environment helps simulate real-world conditions and uncover bugs that may arise from interactions with other devices in the system.
+
+---
 
 ## 6.2.3 Primary Input Data in CRT
 
@@ -99,6 +136,8 @@ Randomizing the environment helps simulate real-world conditions and uncover bug
 ### Goal:
 Ensure the random input data is valid, realistic, and comprehensive to test a wide range of scenarios.
 
+---
+
 ## 6.2.4 Encapsulated Input Data in CRT
 
 ### Multiple Layers of Data:
@@ -112,6 +151,8 @@ Ensure the random input data is valid, realistic, and comprehensive to test a wi
 
 ### Goal:
 Randomize data and control fields across all layers, while ensuring the system is tested for both valid and faulty conditions.
+
+---
 
 ## 6.2.5 Protocol Exceptions, Errors, and Violations in CRT
 
@@ -128,6 +169,8 @@ Randomize data and control fields across all layers, while ensuring the system i
 
 ### Goal:
 Ensure the design can handle all types of errors and exceptions gracefully, simulating real-world issues like interruptions or faulty transfers.
+
+---
 
 ## 6.2.6 Delays in CRT
 
@@ -147,6 +190,8 @@ Ensure the design can handle all types of errors and exceptions gracefully, simu
 ### Focus on Functional Errors:
 - This methodology focuses on functional errors, not timing errors.
 - Timing errors like setup and hold violations should be checked using timing analysis tools, not through random delays in the testbench.
+
+---
 
 ## 6.3 Randomization in SystemVerilog
 
