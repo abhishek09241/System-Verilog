@@ -1,4 +1,4 @@
-# Constrained-Random Tests (CRT) in SystemVerilog
+# RANDOMIZATION
 
 ## Table of Contents
 1. [Constrained-Random Tests (CRT)](#61-constrained-random-tests-crt)
