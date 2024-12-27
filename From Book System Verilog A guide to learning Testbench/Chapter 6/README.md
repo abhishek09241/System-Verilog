@@ -49,7 +49,7 @@
 
 ## 6.1.1 CRT Environment Setup
 
-### Effort Comparison
+### 1. Effort Comparison
 - CRT setup requires more effort than directed tests.
 - Directed test: Apply stimulus and manually check results using a golden log file (output file).
 
@@ -59,7 +59,7 @@
 
 ### Advantages of CRT
 - Once set up, hundreds of tests can run automatically without manual result-checking.
-- Improves productivity by trading test-authoring time (manual effort) for CPU time (automated processing).
+- Improves productivity by trade off test-authoring time (manual effort) for CPU time (automated processing).
 
 ---
 
