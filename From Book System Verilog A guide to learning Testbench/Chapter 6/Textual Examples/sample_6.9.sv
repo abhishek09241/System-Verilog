@@ -18,4 +18,4 @@ class BusOp;
 					 LWRD := w_lwrd};		// variable weights
 			
 		}
-en dclass
+endclass: BusOp
