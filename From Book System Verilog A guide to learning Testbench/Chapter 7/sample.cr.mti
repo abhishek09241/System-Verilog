@@ -1,8 +1,0 @@
-{/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 7/sample_7.1.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 7/sample_7.1.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
--- Compiling module sample_7_1
-
-Top level modules:
-	sample_7_1
-
-} {} {}}
