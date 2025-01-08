@@ -1,0 +1,156 @@
+m255
+K4
+z2
+!s12c _opt2
+Z0 !s99 nomlopt
+Z1 !s12c _opt1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+Z2 !s12c _opt
+R0
+R2
+R0
+R2
+R0
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/home/abhishek/System Verilog/From Book System Verilog A guide to learning Testbench/Chapter 7/Exercise
+T_opt
+!s110 1736343272
+VII0154]@HV<idJSVYlINY0
+04 10 4 work question_1 fast 0
+=1-000ae431a4f1-677e7ee8-53da7-1dae
+R0
+Z4 !s12b OEM100
+Z5 !s124 OEM10U1 
+Z6 o-quiet -auto_acc_if_foreign -work work
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2023.3;77
+R3
+T_opt1
+!s110 1736345180
+VR^<WldckoD66V9n9Xj:Tk2
+04 10 4 work question_2 fast 0
+=1-000ae431a4f1-677e865c-4f3a0-29e0
+R0
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+R3
+T_opt2
+!s110 1736345781
+Vg<SEzEW?ddBjkFYhdGZCG0
+04 10 4 work question_3 fast 0
+=1-000ae431a4f1-677e88b5-713bc-2c47
+R0
+R4
+R5
+R6
+R7
+n@_opt2
+R8
+vquestion_1
+2question_1.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1736343271
+!i10b 1
+!s100 :=FNFVAF@NIGzco8KlUn;2
+IRLOGAfj<_Y3LD4zo<2cUF1
+S1
+R3
+w1736343269
+8question_1.sv
+Fquestion_1.sv
+!i122 2
+L0 7 25
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1736343271.000000
+!s107 question_1.sv|
+!s90 question_1.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+vquestion_2
+2question_2.sv
+R9
+!s110 1736345179
+!i10b 1
+!s100 mX]?8MG:>MKn<49S1a>4E2
+IFd8^5fXHed;Q3l;AG]VTj0
+S1
+R3
+w1736345176
+8question_2.sv
+Fquestion_2.sv
+!i122 17
+L0 4 39
+R10
+R11
+r1
+!s85 0
+31
+!s108 1736345179.000000
+!s107 question_2.sv|
+!s90 question_2.sv|
+!i113 0
+R12
+R7
+4question_3
+2question_3.sv
+R9
+!s110 1736345780
+!i10b 1
+!s100 7:M6gDgR3D@lZPGUn9^@;0
+I]1j@];:lEF?SGmgT@1b6F3
+S1
+R3
+w1736345776
+8question_3.sv
+Fquestion_3.sv
+!i122 18
+L0 3 0
+R10
+R11
+r1
+!s85 0
+31
+!s108 1736345780.000000
+!s107 question_3.sv|
+!s90 question_3.sv|
+!i113 0
+R12
+R7
